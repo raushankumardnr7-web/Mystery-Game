@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detective Mystery Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🕵️ Detective Mystery</h1>
+
+    <div class="timer">
+        ⏳ Time Left: <span id="time">60</span>s
+    </div>
+
+
+    <div class="room">
+
+        <h2>Crime Scene</h2>
+
+        <p>Find the 3 hidden clues to unlock the secret room.</p>
+
+
+        <div class="clue" onclick="findClue(this)">
+            🔎</div>
+
+        <div class="clue" onclick="findClue(this)">
+            🧤
+        </div>
+
+        <div class="clue" onclick="findClue(this)">
+            🩸
+        </div>
+
+    </div>
+
+
+    <div class="progress">
+        Clues Found:
+        <span id="count">
+            0/3
+        </span>
+    </div>
+
+
+    <button id="unlock" disabled onclick="unlockRoom()">
+        🗝️ Unlock Secret Room
+    </button>
+
+
+    <div class="secret" id="secret">
+
+        <h2>Secret Room</h2>
+
+        <p>
+            A locked diary contains a code.
+        </p>
+
+
+        <h3>
+            Puzzle:
+            What number comes next?
+        </h3>
+
+        <h2>
+            2, 4, 8, 16, ?
+        </h2>
+
+
+        <input type="number" id="answer" placeholder="Enter code">
+
+
+        <button onclick="checkAnswer()">
+            Submit
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <audio id="sound">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
